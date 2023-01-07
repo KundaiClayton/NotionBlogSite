@@ -1,0 +1,33 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  /* display: flex; */
+}
+
+.badge {
+  padding: 0.3rem;
+  border-radius: 1rem;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: larger;
+}
+.card {
+  margin: 1rem 0;
+  padding: 2.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  position: relative;
+}

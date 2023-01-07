@@ -2,6 +2,7 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { getAllPublished, getSingleBlogPostBySlug } from "../../lib/notion";
+import styles from "../.././styles/Article.module.css";
 
 const CodeBlock = ({ language, codestring }: any) => {
   return (
@@ -13,10 +14,23 @@ const CodeBlock = ({ language, codestring }: any) => {
 
 export default function Post({ post }: any) {
   return (
-    <section>
-      <h2>{post.metadata.title}</h2>
-      <span>{post.metadata.date}</span>
-      <p style={{ color: "gray" }}>{post.metadata.tags.join(", ")}</p>
+    <section className={styles.container}>
+      <div className={styles.main}>
+        {" "}
+        <h2 style={{ color: "gray", fontSize: "2rem" }}>
+          {" "}
+          {post.metadata.title}
+        </h2>
+        <span> {post.metadata.date}</span>
+        <div style={{ display: "flex", margin: "0.3rem" }}>
+          {post.metadata.tags.map((tag: string) => (
+            <div className={styles.badge} key={tag}>
+              {tag}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <ReactMarkdown
         components={{
           code({ node, inline, className, children, ...props }) {
