@@ -22,7 +22,9 @@ export default function Post({ post }: any) {
           {post.metadata.title}
         </h2>
         <span> {post.metadata.date}</span>
-        <div style={{ display: "flex", margin: "0.3rem" }}>
+        <div
+          style={{ display: "flex", margin: "1rem", justifyContent: "center" }}
+        >
           {post.metadata.tags.map((tag: string) => (
             <div className={styles.badge} key={tag}>
               {tag}
@@ -60,7 +62,7 @@ export const getStaticProps = async ({ params }: any) => {
     props: {
       post,
     },
-    revalidate: 60,
+    revalidate: 1,
   };
 };
 

@@ -1,17 +1,19 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 6rem;
 }
 
 .main {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .badge {
   padding: 0.3rem;
   border-radius: 1rem;
-  background-color: blueviolet;
-  display: flex;
-  justify-content: center;
+  background-color: rgb(17, 94, 67);
+  text-align: center;
 }
 .nav {
   display: flex;
