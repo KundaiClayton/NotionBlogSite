@@ -4,11 +4,22 @@
 
 .main {
   padding: 4rem;
+  /* display: flex; */
 }
-
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: larger;
+}
 .card {
   margin: 1rem 0;
-  padding: 1.5rem;
+  padding: 2.5rem;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   position: relative;
