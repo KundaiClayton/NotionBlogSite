@@ -20,8 +20,8 @@ export default function Home({ posts }: any) {
 
         <section className={styles.hero}>
           <h2>
-            Hi, I'm Kundai! Welcome to my blog. Here you'll find posts about my
-            interests, thoughts and more. Thanks for visiting!
+            Hi, I&apos;m Kundai! Welcome to my blog. Here you&apos;ll find posts
+            about my interests, thoughts and more. Thanks for visiting!
           </h2>
         </section>
         <main className={styles.main}>
