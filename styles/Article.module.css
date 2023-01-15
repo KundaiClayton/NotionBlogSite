@@ -12,8 +12,8 @@
 .badge {
   padding: 0.3rem;
   border-radius: 1rem;
-  background-color: rgb(17, 94, 67);
   text-align: center;
+  background: linear-gradient(to left, red, rgba(0, 0, 0, 0));
 }
 .nav {
   display: flex;
