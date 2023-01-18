@@ -2,7 +2,7 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { getAllPublished, getSingleBlogPostBySlug } from "../../lib/notion";
-import styles from "../.././styles/Article.module.css";
+import styles from "./Article.module.css";
 import NavBar from "../../src/components/NavBar";
 
 const CodeBlock = ({ language, codestring }: any) => {
@@ -41,6 +41,7 @@ export default function Post({ post }: any) {
         </div>
 
         <ReactMarkdown
+          className={styles.reactMarkDown}
           components={{
             code({ node, inline, className, children, ...props }) {
               const match = /language-(\w+)/.exec(className || "");

@@ -1,5 +1,5 @@
 .container {
-  padding: 0 6rem;
+  padding: 0 20rem;
 }
 
 .main {
@@ -7,10 +7,11 @@
   flex-direction: column;
   text-align: center;
   padding-bottom: 2rem;
+  line-height: 1rem;
 }
 
 .badge {
-  padding: 0.3rem;
+  padding: 0.4rem;
   border-radius: 1rem;
   text-align: center;
   background: linear-gradient(to left, red, rgba(0, 0, 0, 0));
@@ -32,4 +33,20 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   position: relative;
+}
+.reactMarkDown {
+  line-height: 2rem;
+  font-family: "Verdana", arial, helvetica;
+}
+
+.reactMarkDown ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  list-style: disc outside none;
+}
+
+.reactMarkDown ul li {
+  margin-left: 2em;
+  display: list-item;
+  text-align: -webkit-match-parent;
 }

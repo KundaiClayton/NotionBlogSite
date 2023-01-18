@@ -1,10 +1,9 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 15rem;
 }
 
 .main {
   padding: 4rem;
-  /* display: flex; */
 }
 .nav {
   display: flex;
