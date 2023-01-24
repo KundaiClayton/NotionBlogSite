@@ -2,7 +2,7 @@ import styles from "./NavBar.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function NavBar({ posts }: any) {
+export default function NavBar() {
   return (
     <div className={styles.container}>
       <Link href={"/"} className={styles.nav}>
@@ -11,7 +11,7 @@ export default function NavBar({ posts }: any) {
       <div className={styles.avatar}>
         <Image
           src="/profileimage.jpeg"
-          alt="Picture of the author"
+          alt="My Pic"
           width={50}
           height={50}
           style={{

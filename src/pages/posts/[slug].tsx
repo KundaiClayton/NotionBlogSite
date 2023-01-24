@@ -3,7 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { getAllPublished, getSingleBlogPostBySlug } from "../../lib/notion";
 import styles from "./Article.module.css";
-import NavBar from "../../src/components/NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 
 const CodeBlock = ({ language, codestring }: any) => {
   return (
@@ -20,10 +20,7 @@ export default function Post({ post }: any) {
       <section className={styles.container}>
         <div className={styles.main}>
           {" "}
-          <h2 style={{ color: "gray", fontSize: "2rem" }}>
-            {" "}
-            {post.metadata.title}
-          </h2>
+          <p> {post.metadata.title}</p>
           <span> {post.metadata.date}</span>
           <div
             style={{

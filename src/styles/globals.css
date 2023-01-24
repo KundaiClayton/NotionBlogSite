@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background: #1a2027;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -21,6 +22,6 @@ a {
   }
   body {
     color: white;
-    background: #1A2027;
+    background: #1a2027;
   }
 }
