@@ -14,9 +14,14 @@
   display: flex;
   justify-content: center;
   padding: 1rem 2rem;
-  font-size: larger;
-
   text-align: center;
+}
+
+.hero p {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Open Sans";
+  line-height: 3rem;
 }
 .card {
   margin: 1rem 0;
@@ -49,4 +54,26 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+
+    text-align: center;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem 0.2rem;
+  }
+  .main {
+    padding: 1rem;
+  }
 }
