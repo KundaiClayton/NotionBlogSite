@@ -20,7 +20,7 @@
   padding: 0.4rem;
   border-radius: 1rem;
   text-align: center;
-  background: linear-gradient(to left, red, rgba(0, 0, 0, 0));
+  background: linear-gradient(to left, orangered, rgba(0, 0, 0, 0));
 }
 .nav {
   display: flex;
