@@ -1,5 +1,5 @@
 .container {
-  padding: 0 10rem;
+  padding: 0 30rem;
 }
 
 .main {
@@ -11,8 +11,9 @@
 }
 
 .main p {
-  font-size: 2.5rem;
-
+  font-size: 2rem;
+  line-height: 3rem;
+  color: rgba(249, 245, 245, 0.744);
 }
 
 .badge {
@@ -59,5 +60,9 @@
 @media only screen and (max-width: 600px) {
   .container {
     padding: 0 2rem;
+  }
+  .main p {
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
