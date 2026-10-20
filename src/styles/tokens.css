@@ -1,0 +1,111 @@
+/*
+ * Garden design tokens.
+ * Components should use semantic tokens (canvas, surface, text, accent) rather
+ * than hard-coded theme colors. Apply a theme with data-theme="dark" on <html>;
+ * without an explicit choice, the visitor's system preference is respected.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Palette primitives */
+  --clay-700: #873723;
+  --clay-600: #a8462f;
+  --clay-400: #c9684a;
+  --cobalt-700: #123caa;
+  --cobalt-600: #174ac8;
+  --cobalt-400: #416fe0;
+  --ink-900: #252522;
+  --ink-700: #4e4c47;
+  --ink-500: #68655f;
+  --paper-100: #fbf8f1;
+  --paper-200: #f5f1e8;
+  --paper-300: #eee7da;
+
+  /* Semantic light theme */
+  --color-canvas: var(--paper-200);
+  --color-surface: var(--paper-100);
+  --color-surface-raised: #fffdf8;
+  --color-text: var(--ink-900);
+  --color-text-muted: var(--ink-500);
+  --color-border: #d8cfc0;
+  --color-accent-clay: var(--clay-600);
+  --color-accent-blue: var(--cobalt-600);
+  --color-link: var(--cobalt-700);
+  --color-focus: var(--cobalt-600);
+  --color-selection: #dce6ff;
+
+  /* Typography */
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-body: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.5rem, 3vw, 2.25rem);
+  --text-display: clamp(2.5rem, 6vw, 5rem);
+  --leading-tight: 1.08;
+  --leading-normal: 1.65;
+  --measure-reading: 68ch;
+
+  /* Layout and shape */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --content-width: 72rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.875rem;
+  --border-width: 1px;
+  --shadow-card: 0 8px 28px rgb(44 35 24 / 8%);
+
+  /* Motion */
+  --motion-fast: 140ms;
+  --motion-standard: 220ms;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-canvas: #151b20;
+  --color-surface: #1c242a;
+  --color-surface-raised: #232d33;
+  --color-text: #f2ece2;
+  --color-text-muted: #c1b9ae;
+  --color-border: #39434a;
+  --color-accent-clay: #ed7958;
+  --color-accent-blue: #7fa0ff;
+  --color-link: #a2b8ff;
+  --color-focus: #9bb3ff;
+  --color-selection: #293e73;
+  --shadow-card: 0 10px 32px rgb(0 0 0 / 24%);
+}
+
+/* Follow the OS until a visitor makes an explicit theme choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --color-canvas: #151b20;
+    --color-surface: #1c242a;
+    --color-surface-raised: #232d33;
+    --color-text: #f2ece2;
+    --color-text-muted: #c1b9ae;
+    --color-border: #39434a;
+    --color-accent-clay: #ed7958;
+    --color-accent-blue: #7fa0ff;
+    --color-link: #a2b8ff;
+    --color-focus: #9bb3ff;
+    --color-selection: #293e73;
+    --shadow-card: 0 10px 32px rgb(0 0 0 / 24%);
+  }
+}
+
+::selection {
+  color: var(--color-text);
+  background: var(--color-selection);
+}
