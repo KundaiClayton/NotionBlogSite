@@ -5,9 +5,9 @@
 
 ## Styling approach
 
-This app already uses Next.js CSS Modules. Keep CSS Modules as the component-scoped styling system and use the shared CSS custom properties in `src/styles/tokens.css` for design values. This gives us scoped styles without adding a utility framework dependency to the existing Next.js 13 app.
+Use **Tailwind CSS v4** for new page layouts and reusable UI. Its CSS-first setup keeps the system close to the styles it governs and avoids a separate JavaScript configuration file. Keep `src/styles/tokens.css` as the single source of truth for design values, then expose those values through Tailwind's `@theme` variables rather than duplicating palette values.
 
-Use semantic variables such as `--color-canvas`, `--color-surface`, `--color-text`, `--color-accent-clay`, and `--color-accent-blue` inside modules. Avoid repeating raw palette values in component CSS. If layout utility classes become useful later, evaluate Tailwind separately; the source-of-truth tokens should remain the CSS variables either way.
+Use semantic variables such as `--color-canvas`, `--color-surface`, `--color-text`, `--color-accent-clay`, and `--color-accent-blue`. Use utilities for composition and responsive layout; keep a small amount of plain CSS for global theme behavior, long-form article typography, and artwork treatments that are clearer as CSS. Existing CSS Modules may remain as a migration bridge while pages are converted, but they are not the default for new components.
 
 ## Visual principles
 
