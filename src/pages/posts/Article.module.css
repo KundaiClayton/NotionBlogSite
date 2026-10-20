@@ -1,68 +1,136 @@
 .container {
-  padding: 0 20rem;
+  width: min(100% - 3rem, var(--content-width));
+  margin: 0 auto;
+  padding: 2rem 0 5rem;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding-bottom: 2rem;
-  line-height: 1rem;
+  align-items: flex-start;
+  padding: 2rem 0;
+  border-bottom: var(--border-width) solid var(--color-border);
+  line-height: var(--leading-normal);
 }
 
 .main p {
-  font-size: 2rem;
-  line-height: 3rem;
-  color: rgba(249, 245, 245, 0.744);
+  margin: 0 0 0.75rem;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+}
+
+.main span {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
 }
 
 .badge {
-  padding: 0.4rem;
-  border-radius: 1rem;
-  text-align: center;
-  background: linear-gradient(to left, #f0b34c, rgba(0, 0, 0, 0));
+  margin-right: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-accent-clay);
+  background: var(--color-surface);
+  font-size: var(--text-xs);
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
 }
+
 .hero {
   display: flex;
   justify-content: center;
   padding: 1rem 2rem;
-  font-size: larger;
+  font-size: var(--text-lg);
 }
+
 .card {
   margin: 1rem 0;
-  padding: 2.5rem;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  position: relative;
+  padding: 2rem;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
 }
+
 .reactMarkDown {
-  line-height: 2rem;
-  font-family: "Verdana", arial, helvetica;
+  max-width: var(--measure-reading);
+  margin: 2rem auto 0;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+.reactMarkDown h1,
+.reactMarkDown h2,
+.reactMarkDown h3,
+.reactMarkDown h4 {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  line-height: var(--leading-tight);
+}
+
+.reactMarkDown h2 {
+  margin-top: 2.5em;
+  font-size: var(--text-xl);
+}
+
+.reactMarkDown p {
+  margin: 1.4em 0;
+}
+
+.reactMarkDown a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.reactMarkDown img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
 }
 
 .reactMarkDown ul {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  list-style: disc outside none;
+  margin: 1em 0;
+  padding-left: 1.5em;
+  list-style: disc outside;
 }
 
 .reactMarkDown ul li {
-  margin-left: 2em;
-  display: list-item;
-  text-align: -webkit-match-parent;
+  margin: 0.5em 0;
+}
+
+.reactMarkDown :not(pre) > code {
+  padding: 0.15em 0.35em;
+  border-radius: var(--radius-sm);
+  color: var(--color-accent-clay);
+  background: var(--color-surface-raised);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
 }
 
 @media only screen and (max-width: 600px) {
   .container {
-    padding: 0 2rem;
+    width: min(100% - 2rem, var(--content-width));
+    padding-top: 1rem;
   }
+
+  .main {
+    padding: 1.5rem 0;
+  }
+
+  .reactMarkDown {
+    margin-top: 1.5rem;
+  }
+
   .main p {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: var(--text-xl);
   }
 }
