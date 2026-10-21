@@ -1,0 +1,16 @@
+# Artwork metadata template.
+# Keep prompts and provenance notes in docs/artwork/source/ (non-public).
+# Add approved, published artwork here; do not record private writing.
+assets: []
+# Example entry:
+# assets:
+#   - id: humble-god-cover
+#     path: /art/poems/humble-god-cover.webp
+#     title: A Humble God cover illustration
+#     kind: article-cover
+#     alt: Red earth and a lone tree beneath a cobalt sun.
+#     decorative: false
+#     aspect_ratio: "3:2"
+#     themes: [light, dark]
+#     source_note: docs/artwork/source/humble-god-cover.md
+#     status: approved
